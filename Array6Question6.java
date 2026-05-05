@@ -12,20 +12,24 @@ public class Array6Question6 {
 		int[] arr1 = new int[size];
 		int[] arr2 = new int[size];
 		for (int i = 0; i < size; i++) {
-			System.out.println("Enter value in arr1:");
+			System.out.println("Enter value " +i+ "in arr1:");
 			arr1[i] = sc.nextInt();
-			System.out.println("Enter value in arr2:");
+			System.out.println("Enter value " +i+ " in arr2:");
 			arr2[i] = sc.nextInt();
 		}
 
 		System.out.println("Common elements:");
+		int flag = 0;
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
 				if (arr1[i] == arr2[j]) {
 					System.out.println(arr1[i]);
-					break;
+					flag++;
 				}
 			}
+		}
+		if(flag == 0) {
+			System.out.println("No Common elements");
 		}
 	}
 }
